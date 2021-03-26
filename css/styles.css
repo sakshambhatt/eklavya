@@ -1,0 +1,81 @@
+.TextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.TextContainer > p {
+    margin: 1em;
+    max-width: 720px;
+}
+
+.Header {
+    grid-area: h;
+}
+.LinkList {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5em;
+    grid-area: l;
+    max-width: 200px;
+}
+.ComponentList {
+    grid-area: c;
+}
+.Footer {
+    grid-area: f;
+}
+/* Site layout using grid */
+.DocSite {
+    display: grid;
+    grid-template-areas:
+    "h h h"
+    "l c c"
+    "f f f";
+}
+
+.ComponentList {
+    display: flex;
+    flex-direction: column;
+}
+.ComponentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+}
+.ComponentContainer li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* code */
+pre {
+    z-index: 1;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 6px 18px rgba(0,0,0,0.2);
+}
+
+/* list v custom for alert */
+#alert .ListV {
+    row-gap: 1em;
+}
+
+.FloatingActionButton img {
+    /* can be changed */
+    margin-left: 5em;
+}
+/* for demonstration purpose */
+.Grid p {
+    border: 1px solid var(--dark);
+    border-radius: 0.25em;
+    padding: 1em;
+}
+.Grid {
+    width: 720px;
+}

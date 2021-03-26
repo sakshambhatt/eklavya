@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>documentation</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/eklavya.css">
+    <link rel="stylesheet" href="/css/prism.css">
+</head>
+<body>
+    <div class="DocSite">
+        <header class="Header HeaderCent">
+            <p class="Heading Heading1">eklavya</p>
+            <p>a minimal CSS component library for React</p>
+            <nav class="Nav">
+                <a class="Link" href="/">home</a>
+                <a class="Link" href="/pages/installation.html">installation</a>
+                <a class="Link" href="/pages/doc.html">documentation</a>
+                <a class="Link" href="/pages/credits.html">credits</a>
+            </nav>
+            <hr width="100%">
+        </header>
+        
+        <ul class="List LinkList">
+            <li><a class="Link" href="#avatar">avatar</a></li>
+            <li><a class="Link" href="#alert">alert</a></li>
+            <li><a class="Link" href="#badge">badge</a></li>
+            <li><a class="Link" href="#button">button</a></li>
+            <li><a class="Link" href="#card">card</a></li>
+            <li><a class="Link" href="#ResponsiveImage">responsive image</a></li>
+            <li><a class="Link" href="#RoundImage">round image</a></li>
+            <li><a class="Link" href="#Input">input</a></li>
+            <li><a class="Link" href="#List">list</a></li>
+            <li><a class="Link" href="#Modal">modal</a></li>
+            <li><a class="Link" href="#Grid">grid</a></li>
+            <li><a class="Link" href="#Text">text utilities</a></li>
+            <li><a class="Link" href="#Toast">toast</a></li>
+            <li><a class="Link" href=""></a></li>
+            <li><a class="Link" href=""></a></li>
+        </ul>
+        <div class="ComponentList">
+            <div id="avatar" class="ComponentContainer">
+                <p class="Heading Heading3">avatars</p>
+                <ul class="List ListH">
+                    <li class="ListV" ><img class="Avatar AvatarSm" src="/img/woman.svg" alt="small avatar"><p>AvatarSm</p><li>
+                    <li class="ListV" ><img class="Avatar AvatarMd" src="/img/man.svg" alt="medium avatar"><p>AvatarMd</p><li>
+                    <li class="ListV" ><img class="Avatar AvatarLg" src="/img/woman.svg" alt="large avatar"><p>AvatarLg</p></li>
+                </ul>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;img class="Avatar AvatarSm" src="/img/woman.svg" alt="small avatar"&gt;&lt;p&gt;AvatarSm&lt;/p&gt;
+&lt;img class="Avatar AvatarMd" src="/img/man.svg" alt="medium avatar"&gt;&lt;p&gt;AvatarMd&lt;/p&gt;
+&lt;img class="Avatar AvatarLg" src="/img/woman.svg" alt="large avatar"&gt;&lt;p&gt;AvatarLg&lt;/p&gt;</code></pre>
+            </div>
+            <div id="alert" class="ComponentContainer">
+                <p class="Heading Heading3">alerts</p>
+                <ul class="List ListV">
+                    <li><span class="AlertPrimary">primary alert</span></li>
+                    <li><span class="AlertSuccess">success alert</span></li>
+                    <li><span class="AlertDanger">danger alert</span></li>
+                    <li><span class="AlertWarning">warning alert</span></li>
+                </ul>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;span class="AlertPrimary"&gt;primary alert&lt;/span&gt;
+&lt;span class="AlertSuccess"&gt;success alert&lt;/span&gt;
+&lt;span class="AlertDanger"&gt;danger alert&lt;/span&gt;
+&lt;span class="AlertWarning"&gt;warning alert&lt;/span&gt;</code></pre>
+            </div>
+            <div id="badge" class="ComponentContainer">
+                <p class="Heading Heading3">badges on avatars</p>
+                <ul class="List ListH">
+                    <li class="ListV">
+                        <div class="BadgeContainer">
+                            <img class="Avatar AvatarSm" src="/img/woman.svg" alt="avatar online">
+                            <span class="Badge BadgeAvatar BadgeOnline"></span>
+                        </div>
+                        <p>BadgeOnline</p>
+                    </li>
+                    <li class="ListV">
+                        <div class="BadgeContainer">
+                            <img class="Avatar AvatarMd" src="/img/man.svg" alt="avatar offline">
+                            <span class="Badge BadgeAvatar BadgeOffline"></span>
+                        </div>
+                        <p>BadgeOffline</p>
+                    </li>
+                    <li class="ListV">
+                        <div class="BadgeContainer">
+                            <img class="Avatar AvatarLg" src="/img/woman.svg" alt="avatar busy">
+                            <span class="Badge BadgeAvatar BadgeBusy"></span>
+                        </div>
+                        <p>BadgeBusy</p>
+                    </li>
+                </ul>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="BadgeContainer"&gt;
+    &lt;img class="Avatar AvatarSm" src="/img/woman.svg" alt="avatar online"&gt;
+    &lt;span class="Badge BadgeAvatar BadgeOnline"&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="BadgeContainer"&gt;
+    &lt;img class="Avatar AvatarMd" src="/img/man.svg" alt="avatar offline"&gt;
+    &lt;span class="Badge BadgeAvatar BadgeOffline"&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="BadgeContainer"&gt;
+    &lt;img class="Avatar AvatarLg" src="/img/woman.svg" alt="avatar busy"&gt;
+    &lt;span class="Badge BadgeAvatar BadgeBusy"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                <p class="Heading Heading3">badges on icons</p>
+                <ul class="List ListH">
+                    <li class="ListV">
+                        <div class="BadgeContainer">
+                            <img class="Iconify32" src="/img/shopping-cart.svg" alt="shopping cart">
+                            <span class="Badge BadgeIcon">9</span>
+                        </div>
+                    </li>
+                    <li class="ListV">
+                        <div class="BadgeContainer">
+                            <img class="Iconify32" src="/img/mail-inbox-app.svg" alt="inbox">
+                            <span class="Badge BadgeIcon">99+</span>
+                        </div>
+                    </li>
+                </ul>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="BadgeContainer"&gt;
+    &lt;img class="Iconify32" src="/img/shopping-cart.svg" alt="shopping cart"&gt;
+    &lt;span class="Badge BadgeIcon"&gt;9&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div id="button" class="ComponentContainer">
+                <p class="Heading Heading3">buttons</p>
+                <ul class="List ListH">
+                    <li><button class="Button ButtonPrimary">primary</button></li>
+                    <li><a class="Link" href="/pages/doc.html#button">link</a></li>
+                    <li><a href="https://www.linkedin.com/in/saksham-bhatt-13a177182/"><img class="Iconify32" src="/img/linkedin.svg" alt="linkedin link"></a></li>
+                    <li><a class="Link" href="floating-action-button.html">see floating action button</a></li>
+                </ul>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;button class="Button ButtonPrimary"&gt;primary&lt;/button&gt;
+&lt;a class="Link" href="/pages/doc.html#button"&gt;link&lt;/a&gt;
+&lt;a href="https://www.linkedin.com/in/saksham-bhatt-13a177182/"&gt;
+    &lt;img class="Iconify32" src="/img/linkedin.svg" alt="linkedin link"&gt;
+&lt;/a&gt;</code></pre>
+            </div>
+            <div id="card" class="ComponentContainer">
+                <p class="Heading Heading3">card with badge and shadow</p>
+                <div class="CardContainer">
+                    <div class="Card CardShadow">
+                        <div class="BadgeContainer">
+                            <img class="CardImage" src="https://cdn.pixabay.com/photo/2016/03/27/22/16/fashion-1284496_960_720.jpg" alt="shoe image">
+                            <span class="Badge BadgeCard">on sale!</span>
+                        </div>
+                        <p class="ProductName">red stiletto</p>
+                        <span><span class="ActualPrice">&#8377;1899</span> (<strike class="PrePrice">2999</strike>) <span class="PercentOff">36% off</span></span>
+                        <span>available sizes (EU)</span>
+                        <ul>
+                            <li>36</li>
+                            <li>37</li>
+                            <li>38</li>
+                            <li>39</li>
+                            <li>40</li>
+                        </ul>
+                        <ul>
+                            <li><button class="Button ButtonPrimary">add to cart</button></li>
+                            <li><button class="ButtonIcon"><img class="Iconify24" src="/img/like.svg" alt="like button"></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="CardContainer"&gt;
+    &lt;div class="Card CardShadow"&gt;
+        &lt;div class="BadgeContainer"&gt;
+            &lt;img class="CardImage" src="https://cdn.pixabay.com/photo/2016/03/27/22/16/fashion-1284496_960_720.jpg" alt="shoe image"&gt;
+            &lt;span class="Badge BadgeCard"&gt;on sale!&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;p class="ProductName"&gt;red stiletto&lt;/p&gt;
+        &lt;span&gt;&lt;span class="ActualPrice"&gt;&#8377;1899&lt;/span&gt; (&lt;strike class="PrePrice"&gt;2999&lt;/strike&gt;) &lt;span class="PercentOff"&gt;36% off&lt;/span&gt;&lt;/span&gt;
+        &lt;span&gt;available sizes (EU)&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;36&lt;/li&gt;
+            &lt;li&gt;37&lt;/li&gt;
+            &lt;li&gt;38&lt;/li&gt;
+            &lt;li&gt;39&lt;/li&gt;
+            &lt;li&gt;40&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;button class="Button ButtonPrimary"&gt;add to cart&lt;/button&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;button class="ButtonIcon"&gt;&lt;img class="Iconify24" src="/img/like.svg" alt="like button"&gt;&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <p class="Heading Heading3">card with dismiss</p>
+                <div class="CardContainer">
+                    <div class="Card CardShadow CardDismiss">
+                        <div class="BadgeContainer">
+                            <img class="CardImage" src="https://cdn.pixabay.com/photo/2016/03/27/22/16/fashion-1284496_960_720.jpg" alt="shoe image">
+                            <span class="Badge BadgeCard">on sale!</span>
+                            <div><button class="ButtonDismiss"><img class="Iconify24" src="https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png" alt="close button image"/></button></div>
+                        </div>
+                        <p class="ProductName">red stiletto</p>
+                        <span><span class="ActualPrice">&#8377;1899</span> (<strike class="PrePrice">2999</strike>) <span class="PercentOff">36% off</span></span>
+                        <span>available sizes (EU)</span>
+                        <ul>
+                            <li>36</li>
+                            <li>37</li>
+                            <li>38</li>
+                            <li>39</li>
+                            <li>40</li>
+                        </ul>
+                        <ul>
+                            <li><button class="Button ButtonPrimary">add to cart</button></li>
+                            <li><button class="ButtonIcon"><img class="Iconify24" src="/img/like.svg" alt="like button"></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="CardContainer"&gt;
+    &lt;div class="Card CardShadow CardDismiss"&gt;
+        &lt;div class="BadgeContainer"&gt;
+            &lt;img class="CardImage" src="https://cdn.pixabay.com/photo/2016/03/27/22/16/fashion-1284496_960_720.jpg" alt="shoe image"&gt;
+            &lt;span class="Badge BadgeCard"&gt;on sale!&lt;/span&gt;
+            &lt;div&gt;&lt;button class="ButtonDismiss"&gt;&lt;img class="Iconify24" src="https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png" alt="close button image"/&gt;&lt;/button&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class="ProductName"&gt;red stiletto&lt;/p&gt;
+        &lt;span&gt;&lt;span class="ActualPrice"&gt;&#8377;1899&lt;/span&gt; (&lt;strike class="PrePrice"&gt;2999&lt;/strike&gt;) &lt;span class="PercentOff"&gt;36% off&lt;/span&gt;&lt;/span&gt;
+        &lt;span&gt;available sizes (EU)&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;36&lt;/li&gt;
+            &lt;li&gt;37&lt;/li&gt;
+            &lt;li&gt;38&lt;/li&gt;
+            &lt;li&gt;39&lt;/li&gt;
+            &lt;li&gt;40&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;button class="Button ButtonPrimary"&gt;add to cart&lt;/button&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;button class="ButtonIcon"&gt;&lt;img class="Iconify24" src="/img/like.svg" alt="like button"&gt;&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <p class="Heading Heading3">card with text overlay</p>
+                <div class="CardContainer">
+                    <div class="Card CardShadow">
+                        <div class="OverlayContainer">
+                            <img class="CardImage" src="https://www.w3schools.com/w3css/img_snow_wide.jpg" alt="sample image">
+                            <div class="TextOverlay">text overlay</div>
+                        </div>
+                        <p class="ProductName">white mountain</p>
+                        <span><span class="ActualPrice">&#8377;1899999</span> (<strike class="PrePrice">2999999</strike>) <span class="PercentOff">36% off</span></span>
+                        <span>available sizes (EU)</span>
+                        <ul>
+                            <li>36</li>
+                            <li>37</li>
+                            <li>38</li>
+                            <li>39</li>
+                            <li>40</li>
+                        </ul>
+                        <ul>
+                            <li><button class="Button ButtonPrimary">add to cart</button></li>
+                            <li><button class="ButtonIcon"><img class="Iconify24" src="/img/like.svg" alt="like button"></button></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="CardContainer"&gt;
+    &lt;div class="Card"&gt;
+        &lt;div class="OverlayContainer"&gt;
+            &lt;img class="CardImage" src="https://www.w3schools.com/w3css/img_snow_wide.jpg" alt="sample image"&gt;
+            &lt;div class="TextOverlay"&gt;text overlay&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class="ProductName"&gt;white mountain&lt;/p&gt;
+        &lt;span&gt;&lt;span class="ActualPrice"&gt;&#8377;1899999&lt;/span&gt; (&lt;strike class="PrePrice"&gt;2999999&lt;/strike&gt;) &lt;span class="PercentOff"&gt;36% off&lt;/span&gt;&lt;/span&gt;
+        &lt;span&gt;available sizes (EU)&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;36&lt;/li&gt;
+            &lt;li&gt;37&lt;/li&gt;
+            &lt;li&gt;38&lt;/li&gt;
+            &lt;li&gt;39&lt;/li&gt;
+            &lt;li&gt;40&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;button class="Button ButtonPrimary"&gt;add to cart&lt;/button&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;button class="ButtonIcon"&gt;&lt;img class="Iconify24" src="/img/like.svg" alt="like button"&gt;&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <p class="Heading Heading3">text only cards</p>
+                <div class="CardContainer">
+                    <div class="TextCard">
+                        <p class="ProductName">Note1</p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+                    </div>
+                    <div class="TextCard">
+                        <p class="ProductName">Note2</p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+                    </div>
+                    <div class="TextCard">
+                        <p class="ProductName">Note3</p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+                    </div>
+                </div>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="CardContainer"&gt;
+    &lt;div class="TextCard"&gt;
+        &lt;p class="ProductName"&gt;Note1&lt;/p&gt;
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+    &lt;/div&gt;
+    &lt;div class="TextCard"&gt;
+        &lt;p class="ProductName"&gt;Note2&lt;/p&gt;
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+    &lt;/div&gt;
+    &lt;div class="TextCard"&gt;
+        &lt;p class="ProductName"&gt;Note3&lt;/p&gt;
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eveniet hic, consectetur repudiandae reprehenderit corrupti doloremque mollitia, excepturi eius eaque et aut ex ea suscipit quia, ut molestias est aperiam.
+    &lt;/div&gt;    
+&lt;/div&gt;</code></pre>
+            <p class="Heading Heading3">horizontal card</p> 
+            <div class="CardContainer">
+                <div class="HorizontalCard CardShadow CardDismiss">
+                    <div class="">
+                        <div class="BadgeContainer">
+                            <img class="CardImageHorizontal" src="https://cdn.pixabay.com/photo/2016/03/27/22/16/fashion-1284496_960_720.jpg" alt="shoe image">
+                            <span class="Badge BadgeCard">on sale!</span>
+                        </div>
+                    </div>
+                    <div class="HorizontalCardDescription">
+                        <p class="ProductName">red stiletto</p>
+                        <span><span class="ActualPrice">&#8377;1899</span> (<strike class="PrePrice">2999</strike>) <span class="PercentOff">36% off</span></span>
+                        <span>available sizes (EU)</span>
+                        <ul class="List ListH">
+                            <li>36</li>
+                            <li>37</li>
+                            <li>38</li>
+                            <li>39</li>
+                            <li>40</li>
+                        </ul>
+                        <ul class="List ListH">
+                            <li><button class="Button ButtonPrimary">add to cart</button></li>
+                            <li><button class="ButtonIcon"><img class="Iconify24" src="/img/like.svg" alt="like button"></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="Heading Heading4">sample code</p>
+            <pre><code class="language-markup">&lt;div class="CardContainer"&gt;
+    &lt;div class="HorizontalCard CardShadow CardDismiss"&gt;
+        &lt;div&gt;
+            &lt;div class="BadgeContainer"&gt;
+                &lt;img class="CardImageHorizontal" src="https://cdn.pixabay.com/photo/2016/03/27/22/16/fashion-1284496_960_720.jpg" alt="shoe image"&gt;
+                &lt;span class="Badge BadgeCard"&gt;on sale!&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="HorizontalCardDescription"&gt;
+            &lt;p class="ProductName"&gt;red stiletto&lt;/p&gt;
+            &lt;span&gt;&lt;span class="ActualPrice"&gt;&#8377;1899&lt;/span&gt; (&lt;strike class="PrePrice"&gt;2999&lt;/strike&gt;) &lt;span class="PercentOff"&gt;36% off&lt;/span&gt;&lt;/span&gt;
+            &lt;span&gt;available sizes (EU)&lt;/span&gt;
+            &lt;ul class="List ListH"&gt;
+                &lt;li&gt;36&lt;/li&gt;
+                &lt;li&gt;37&lt;/li&gt;
+                &lt;li&gt;38&lt;/li&gt;
+                &lt;li&gt;39&lt;/li&gt;
+                &lt;li&gt;40&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul class="List ListH"&gt;
+                &lt;li&gt;&lt;button class="Button ButtonPrimary"&gt;add to cart&lt;/button&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;button class="ButtonIcon"&gt;&lt;img class="Iconify24" src="/img/like.svg" alt="like button"&gt;&lt;/button&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>  
+        </div> 
+            <div id="ResponsiveImage" class="ComponentContainer">
+                <p class="Heading Heading3">responsive image</p>
+                <img class="ResponsiveImage" src="https://fujifilm-x.com/wp-content/uploads/2019/08/x-t30_sample-images01.jpg" alt="sample responsive image">
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;img class="ResponsiveImage" src="https://fujifilm-x.com/wp-content/uploads/2019/08/x-t30_sample-images01.jpg" alt="sample responsive image"&gt;</code></pre>
+            </div>
+            <div id="RoundImage" class="ComponentContainer">
+                <p class="Heading Heading3">round image</p>
+                <img class="RoundImage" src="https://fujifilm-x.com/wp-content/uploads/2019/08/x-t30_sample-images01.jpg" alt="sample round image">
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;img class="RoundImage" src="https://fujifilm-x.com/wp-content/uploads/2019/08/x-t30_sample-images01.jpg" alt="sample round image"&gt;</code></pre>
+            </div>
+            <div id="Input" class="ComponentContainer">
+                <p class="Heading Heading3">input field</p>
+                <div class="InputContainer">
+                    <div class="InputType">required *</div>
+                    <div class="ErrorMsg">error</div>
+                    <input class="Input" type="text"/>
+                </div>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="InputContainer"&gt;
+    &lt;div class="InputType"&gt;required *&lt;/div&gt;
+    &lt;div class="ErrorMsg"&gt;error&lt;/div&gt;
+    &lt;input class="Input" type="text"/&gt;
+&lt;/div&gt;
+</code></pre>
+                <p class="Heading Heading3">input field: error</p>
+                <div class="InputContainer Error">
+                    <div class="InputType">required *</div>
+                    <div class="ErrorMsg">error</div>
+                    <input class="Input" type="text"/>
+                </div>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="InputContainer Error"&gt;
+    &lt;div class="InputType"&gt;required *&lt;/div&gt;
+    &lt;div class="ErrorMsg"&gt;error&lt;/div&gt;
+    &lt;input class="Input" type="text"/&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div id="List" class="ComponentContainer">
+                <p class="Heading Heading3">list (horizontal)</p>
+                <ul class="List ListH">
+                    <li><a href="https://twitter.com/lucksomecutt"><img class="Iconify32"  src="/img/twitter.svg" alt="twitter link"></a></li>
+                    <li><a href="https://github.com/sakshambhatt"><img class="Iconify32" src="/img/github.svg" alt="github link"></a></li>
+                    <li><a href="https://www.linkedin.com/in/saksham-bhatt-13a177182/"><img class="Iconify32" src="/img/linkedin.svg" alt="linkedin link"></a></li>
+                    <li><a href="https://sakshambhatt.hashnode.dev/"><img class="Iconify32" src="/img/hashnode.png" alt="hasnode blog link"></a></li>
+                </ul>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;ul class="List ListH"&gt;
+    &lt;li&gt;&lt;a href="https://twitter.com/lucksomecutt"&gt;&lt;img class="Iconify32"  src="/img/twitter.svg" alt="twitter link"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/sakshambhatt"&gt;&lt;img class="Iconify32" src="/img/github.svg" alt="github link"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://www.linkedin.com/in/saksham-bhatt-13a177182/"&gt;&lt;img class="Iconify32" src="/img/linkedin.svg" alt="linkedin link"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://sakshambhatt.hashnode.dev/"&gt;&lt;img class="Iconify32" src="/img/hashnode.png" alt="hasnode blog link"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+            
+                <p class="Heading Heading3">list (vertical)</p>
+                <span>available sizes (EU)</span>
+                <ul class="List ListV">
+                    <li>36</li>
+                    <li>37</li>
+                    <li>38</li>
+                    <li>39</li>
+                    <li>40</li>
+                </ul>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;ul class="List ListV"&gt;
+    &lt;li&gt;36&lt;/li&gt;
+    &lt;li&gt;37&lt;/li&gt;
+    &lt;li&gt;38&lt;/li&gt;
+    &lt;li&gt;39&lt;/li&gt;
+    &lt;li&gt;40&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+            </div>
+            <div id="Nav" class="ComponentContainer">
+                <p class="Heading Heading3">nav</p>
+                <nav class="Nav">
+                    <a class="Link" href="/">home</a>
+                    <a class="Link" href="/pages/installation.html">installation</a>
+                    <a class="Link" href="/pages/doc.html">documentation</a>
+                    <a class="Link" href="/pages/credits.html">credits</a>
+                </nav>
+                <p>sample code</p>
+                <pre><code class="language-markup">&lt;nav class="Nav"&gt;
+    &lt;a class="Link" href="/"&gt;home&lt;/a&gt;
+    &lt;a class="Link" href="/pages/installation.html"&gt;installation&lt;/a&gt;
+    &lt;a class="Link" href="/pages/doc.html"&gt;documentation&lt;/a&gt;
+    &lt;a class="Link" href="/pages/credits.html"&gt;credits&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+            <div id="Modal" class="ComponentContainer">
+                <p class="Heading Heading3">modal</p>
+                <div class="Modal List ListV">
+                    <p class="Heading Heading3">modal header</p>
+                    <div class="ModalContent">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus eos ipsum nesciunt nam deserunt voluptatem recusandae voluptatibus et, perferendis, nulla asperiores ea animi a quod ipsam, deleniti saepe laboriosam qui.
+                    </div>
+                    <div class="Button">
+                        <button><img class="Iconify24" src="https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png" alt="close button"></button>
+                    </div>
+                </div>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="Modal List ListV"&gt;
+    &lt;p class="Heading Heading3"&gt;modal header&lt;/p&gt;
+    &lt;div class="ModalContent"&gt;
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus eos ipsum nesciunt nam deserunt voluptatem recusandae voluptatibus et, perferendis, nulla asperiores ea animi a quod ipsam, deleniti saepe laboriosam qui.
+    &lt;/div&gt;
+    &lt;div class="Button"&gt;
+        &lt;button&gt;&lt;img class="Iconify24" src="https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png" alt="close button"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div id="Grid" class="ComponentContainer">
+                <p class="Heading Heading3">grid 2</p>
+                <div class="Grid Grid2">
+                    <p>Item 1</p>
+                    <p>Item 2</p>
+                </div>  
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="Grid Grid2"&gt;
+    &lt;p&gt;Item 1&lt;/p&gt;
+    &lt;p&gt;Item 2&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                <p class="Heading Heading3">grid 3</p>
+                <div class="Grid Grid3">
+                    <p>Item 1</p>
+                    <p>Item 2</p>
+                    <p>Item 3</p>
+                </div>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="Grid Grid3"&gt;
+    &lt;p&gt;Item 1&lt;/p&gt;
+    &lt;p&gt;Item 2&lt;/p&gt;
+    &lt;p&gt;Item 3&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div id="Text" class="ComponentContainer">
+                <p class="Heading Heading3">headings</p>
+                <div class="List ListV">
+                    <p class="Heading Heading1">Heading 1</p>
+                    <p class="Heading Heading2">Heading 2</p>
+                    <p class="Heading Heading3">Heading 3</p>
+                    <p class="Heading Heading4">Heading 4</p>
+                    <p class="Heading Heading5">Heading 5</p>
+                    <p class="Heading Heading6">Heading 6</p>
+                </div>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;p class="Heading Heading1"&gt;Heading 1&lt;/p&gt;
+&lt;p class="Heading Heading2"&gt;Heading 2&lt;/p&gt;
+&lt;p class="Heading Heading3"&gt;Heading 3&lt;/p&gt;
+&lt;p class="Heading Heading4"&gt;Heading 4&lt;/p&gt;
+&lt;p class="Heading Heading5"&gt;Heading 5&lt;/p&gt;
+&lt;p class="Heading Heading6"&gt;Heading 6&lt;/p&gt;
+</code></pre>
+                <p class="Heading Heading3">gray text</p>
+                <p class="Gray">gray text</p>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;p class="Gray"&gt;gray text&lt;/p&gt;</code></pre>
+            </div>
+            <div id="Toast" class="ComponentContainer">
+                <p class="Heading Heading3">toast</p>
+                <div class="Toast">
+                    <div class="ToastHead">
+                        <p class="Heading Heading4">Success</p>
+                        <button><img class="Iconify18" src="/img/close.svg" alt="close button image"></button>
+                    </div>
+                    <div class="Center">
+                        The task was completed successfully
+                    </div>
+                </div>
+                <p class="Heading Heading4">sample code</p>
+                <pre><code class="language-markup">&lt;div class="Toast"&gt;
+    &lt;div class="ToastHead"&gt;
+        &lt;p class="Heading Heading4"&gt;Success&lt;/p&gt;
+        &lt;button&gt;&lt;img class="Iconify18" src="/img/close.svg" alt="close button image"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="Center"&gt;
+        The task was completed successfully
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        
+        <footer class="Footer FooterCent">
+            <hr width="100%">
+            <p>made by Saksham Bhatt</p>
+            <ul class="List ListH">
+                <li><a href="https://twitter.com/lucksomecutt"><img class="Iconify32"  src="/img/twitter.svg" alt="twitter link"></a></li>
+                <li><a href="https://github.com/sakshambhatt"><img class="Iconify32" src="/img/github.svg" alt="github link"></a></li>
+                <li><a href="https://www.linkedin.com/in/saksham-bhatt-13a177182/"><img class="Iconify32" src="/img/linkedin.svg" alt="linkedin link"></a></li>
+                <li><a href="https://sakshambhatt.hashnode.dev/"><img class="Iconify32" src="/img/hashnode.png" alt="hasnode blog link"></a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="/scripts/prism.js"></script>
+</body>
+</html>
