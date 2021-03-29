@@ -1,17 +1,17 @@
-.TextContainer {
+.text-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.TextContainer > p {
+.text-container > p {
     margin: 1em;
     max-width: 720px;
 }
 
-.Header {
+.header {
     grid-area: h;
 }
-.LinkList {
+.link-list {
     padding: 1em;
     display: flex;
     flex-direction: column;
@@ -20,14 +20,14 @@
     grid-area: l;
     max-width: 200px;
 }
-.ComponentList {
+.component-list {
     grid-area: c;
 }
-.Footer {
+.footer {
     grid-area: f;
 }
 /* Site layout using grid */
-.DocSite {
+.docsite {
     display: grid;
     grid-template-areas:
     "h h h"
@@ -35,17 +35,17 @@
     "f f f";
 }
 
-.ComponentList {
+.component-list {
     display: flex;
     flex-direction: column;
 }
-.ComponentContainer {
+.component-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 1em;
 }
-.ComponentContainer li {
+.component-container li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,20 +62,20 @@ pre {
 }
 
 /* list v custom for alert */
-#alert .ListV {
+#alert .list-v {
     row-gap: 1em;
 }
 
-.FloatingActionButton img {
+.floating-action-button img {
     /* can be changed */
     margin-left: 5em;
 }
 /* for demonstration purpose */
-.Grid p {
+.grid p {
     border: 1px solid var(--dark);
     border-radius: 0.25em;
     padding: 1em;
 }
-.Grid {
+.grid {
     width: 720px;
 }

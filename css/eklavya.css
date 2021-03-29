@@ -19,28 +19,28 @@
     box-sizing: border-box; 
 }
 /* avatars */
-.Avatar {
+.avatar {
     border-radius: 50%;
     height: auto;
 }
-.AvatarSm {
+.avatar-sm {
     width: 24px;
 }
-.AvatarMd {
+.avatar-md {
     width: 32px;
 }
-.AvatarLg {
+.avatar-lg {
     width: 48px;
 }
 /* alerts */
-.AlertPrimary {
+.alert-primary {
     font-weight: bold;
     padding: 0.5em;
     border-radius: 0.5em;
     color: var(--blue);
     border: 1px solid var(--blue);
 }
-.AlertSuccess {
+.alert-success {
     font-weight: bold;
     padding: 0.5em;
     border-radius: 0.5em;
@@ -48,14 +48,14 @@
     border: 1px solid var(--green);
 
 }
-.AlertDanger {
+.alert-danger {
     font-weight: bold;
     padding: 0.5em;
     border-radius: 0.5em;
     color: var(--red);
     border: 1px solid var(--red);
 }
-.AlertWarning {
+.alert-warning {
     font-weight: bold;
     padding: 0.5em;
     border-radius: 0.5em;
@@ -64,34 +64,34 @@
 }
 
 /* badges */
-.BadgeContainer {
+.badge-container {
     display: flex;
     position: relative;
     justify-content: center;
     
 }
-.Badge {
+.badge {
     position: absolute;
     border-radius: 50%;
     /* can be changed to suit your needs */
     font-size: x-small;
 }
-.BadgeAvatar {
+.badge-avatar {
     padding: 0.35em;
     border: 1px solid var(--dark);
     right: 1px;
 }
-.BadgeOnline {
+.badge-online {
     background: var(--green);
 }
-.BadgeOffline {
+.badge-offline {
     background: var(--light);
     border: 1px solid var(--red);
 }
-.BadgeBusy {
+.badge-busy {
     background: var(--red);
 }
-.BadgeIcon {
+.badge-icon {
     padding: 0.3em 0.6em;
     background: var(--red);
     color: white;
@@ -100,7 +100,7 @@
     left: 30px;
     top: -5px;
 }
-.BadgeCard {
+.badge-card {
     padding: 0.3em 0.6em;
     background: white;
     color: var(--red);
@@ -110,26 +110,34 @@
     left: 0px;
 }
 /* buttons */
-.Button {
+.button {
     padding: 0.55em;
     border-radius: 0.35em;
 }
-.ButtonPrimary {
+/* following code was to change the cursor from a pointer to a hand signifying action/ link 
+However, it does not seem to work
+reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-effect-in-css-not-working/44510398)*/
+.button:hover {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.button-primary {
     background: var(--green);
     color: var(--light);
     font-weight: bold;
     border: 1px solid var(--green);
 }
-.ButtonPrimary:hover {
+.button-primary:hover {
     background: var(--light);
     color: var(--dark);
     border: 1px solid var(--green);
 }
-.ButtonIcon {
+.button-icon {
     background-color: transparent !important;
     border-color: transparent !important;
 }
-.FloatingActionButton {
+.floating-action-button {
     position: -webkit-sticky;
     position: sticky;
     /* this can be changed to suit your needs */
@@ -137,7 +145,7 @@
     z-index: 1;
 }
 /* used in card with dismiss */
-.ButtonDismiss {
+.button-dismiss {
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -148,7 +156,7 @@
     border-radius: 0 0 0 0.25em;
 }
 /* Cards */
-.CardContainer {
+.card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -158,7 +166,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-.Card {
+.card {
     border-radius: 0.25rem;
     /* changed keep an eye if anything breaks */
     width: fit-content;
@@ -168,41 +176,41 @@
     justify-content: space-evenly;
     row-gap: 0.25em;
 }
-.CardDismiss:hover .ButtonDismiss {
+.card-dismiss:hover .button-dismiss {
     opacity: 1;
 }
-.CardShadow {
+.card-shadow {
     box-shadow: 3px 6px 18px rgba(0,0,0,0.2);
 }
-.CardImage {
+.card-image {
     width: 240px;
     height: auto;
 }
-.ProductName {
+.product-name {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: large;
 }
-.PrePrice {
+.pre-price {
     color: var(--yellow);
     font-weight: bold;
 }
-.ActualPrice {
+.actual-price {
     color: var(--blue);
     font-weight: bold;
 }
-.PercentOff {
+.percent-off {
     color: var(--red);           
     font-weight: bold;
 }
-.Card button {
+.card button {
     margin-bottom: 0.25em;;
 }
 /* card with text overlay */
-.OverlayContainer {
+.overlay-container {
     position: relative;
 }
-.TextOverlay {
+.text-overlay {
     z-index: 2;
     position: absolute;
     bottom: 0;
@@ -212,7 +220,7 @@
     padding: 0.25em;
 }
 /* card with texts only */
-.TextCard {
+.text-card {
     height: 240px;
     width: 240px;
     overflow-y: scroll;
@@ -220,40 +228,40 @@
     color: var(--dark)
 }
 /* horizontal card */
-.HorizontalCard {
+.horizontal-card {
     display: flex;
 }
-.CardImageHorizontal {
+.card-image-horizontal {
     width: 320px;
     height: auto;
 }
-.HorizontalCardDescription {
+.horizontal-card-description {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    /* width of this element matches that of banner w(HorizontalCardDescription) = w(HorizontalCardBanner) */
+    /* width of this element matches that of banner w(horizontal-card-description) = w(horizontal-cardBanner) */
     width: 320px;
 }
 /* responsive image */
-.ResponsiveImage {
+.responsive-image {
     width: 25em;
     height: auto;
 }
 @media screen and (max-width: 425px) {
-    .ResponsiveImage {
+    .responsive-image {
         width: 240px;
         height: auto;
     }
 }
 /* round image */
-.RoundImage {
+.round-image {
     width: 12em;
     height: 12em;
     border-radius: 50%;
 }
 @media screen and (max-width: 425px) {
-    .ResponsiveImage {
+    .responsive-image {
         width: 120px;
         height: 120px;
         border-radius: 50%;
@@ -261,67 +269,75 @@
 }
 /* Input */
 /* input field */
-.InputContainer {
+.input-container {
     position: relative;
-    /* to keep InputType in place */
+    /* to keep input-type in place */
     width: fit-content;
 }
-.Input, .Input:active {
+.input, .input:active {
     padding: 0.37em;
     padding-top: 1em;
     border: none;
     border-bottom: 2px solid var(--dark);
     /* to get rid of outline after click */
-    outline: none;
+    /* outline: none; */
+    /* above line of code causes problems with keyboard accessibility */
     font-size: large;
 }
-.InputType {
+.input-type {
     font-size: small;
     position: absolute;
     top: 0px;
     right: 1px;
 }
 /* input container with error */
-.ErrorMsg {
+.error-msg {
     opacity: 0;
 }
-.Error .InputType{
+.error .input-type{
     opacity: 0;
 }
-.Error .ErrorMsg {
+.error .error-msg {
     opacity: 1;
     font-size: small;
     position: absolute;
     top: 0px;
     color: var(--red);
 }
-.Error .Input {
+.error .input {
     border-bottom: 2px solid var(--red);
 }
 /* lists */
-.List, .Card ul {
+.list, .card ul {
     list-style-type: none;
 }
 /* horizontal lists */
-.ListH, .Card ul {
+.list-h, .card ul {
     display: flex;
     column-gap: 1.5em;
 }
 /* vertical lists */
-.ListV {
+.list-v {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* below line should make everything even, but in case of avatars, it is not working */
     justify-content: space-evenly;
 }
+.list-v-non-center {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* below line should make everything even, but in case of avatars, it is not working */
+    justify-content: space-evenly;
+}
 /* nav */
-.Nav {
+.nav {
     display: flex;
     column-gap: 1.5em;
 }
 /* modal */
-.Modal {
+.modal {
     width: 720px;
     margin-left: auto;
     margin-right: auto;
@@ -334,65 +350,70 @@
     text-align: center;
 }
 /* grids */
-.Grid {
+.grid {
     display: grid;
     justify-items: center;
 }
-.Grid2 {
+.grid-2 {
     grid-template-columns: 1fr 1fr;
 }
-.Grid3 {
+.grid-3 {
     grid-template-columns: 1fr 1fr 1fr;
 }
 /* text utilities */
-/* Heading1 */
-.Heading {
+/* heading-1 */
+.heading {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
-.Heading1 {
+.heading-1 {
     font-size: xxx-large;
 }
-.Heading2 {
+.heading-2 {
     font-size: xx-large;
 }
-.Heading3 {
+.heading-3 {
     font-size: x-large;
 }
-.Heading4 {
+.heading-4 {
     font-size: larger;
 }
-.Heading5 {
+.heading-5 {
     font-size: large;
 }
-.Heading6 {
+.heading6 {
     font-size: medium;
 }
-.Gray {
+.gray {
     color: var(--gray);
 }
-.Center {
+.center {
     text-align: center;
 }
-.Centre {
+.centre {
     text-align: center;
 }
 /* toast */
-.Toast {
+.toast {
     display: flex;
     flex-direction: column;
     row-gap: 1em;
-    /* align-items: center; */
-    width: 720px;
+    align-items: center;
+    /* width: fit-content; */
+    padding: 0.25em;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid var(--dark);
     border-radius: 0.25em;
 }
-.ToastHead {
-    display: flex;
-    justify-content: space-evenly;
+.toast-success {
     color: var(--green);
+}
+.toast-warning {
+    color: var(--yellow);
+}
+.toast-danger {
+    color: var(--red);
 }
 /* manipulating html & body to keep footer at the bottom */
 html,body {
@@ -405,18 +426,18 @@ html,body {
 }
 
 /* default header */
-.Header {
+.header {
     /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     row-gap: 0.5em;
 }
-.HeaderCent {
+.header-cent {
     align-items: center;
 }
 /* default footer */
-.Footer {
+.footer {
     /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
@@ -425,29 +446,29 @@ html,body {
     /* below property keeps the footer at bottom */
     margin-top: auto; 
 }
-.FooterCent {
+.footer-cent {
     align-items: center;
 }
 
 /* turn images to icons with equal dimensions*/
-.Iconify32 {
+.iconify-32 {
     width: 32px;
     height: 32px;
 }
-.Iconify24 {
+.iconify-24 {
     width: 24px;
     height: 24px;
 }
-.Iconify18 {
+.iconify-18 {
     width: 18px;
     height: 18px;
 }
 /* links */
-.Link, .Link:visited {
+.link, .link:visited {
     text-decoration: none;
     color: var(--green);
 }
-.Link:hover {
+.link:hover {
     color: var(--blue);
     text-decoration: underline;
 }
