@@ -160,14 +160,14 @@ reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-ef
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    column-gap: 2rem;
+    column-gap: 2em;
     /* you can adjust these to suit your needs */
     max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
 }
 .card {
-    border-radius: 0.25rem;
+    border-radius: 0.25em;
     /* changed keep an eye if anything breaks */
     width: fit-content;
     display: flex;
