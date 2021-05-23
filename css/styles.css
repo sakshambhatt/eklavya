@@ -18,7 +18,8 @@
     align-items: center;
     row-gap: 0.5em;
     grid-area: l;
-    max-width: 200px;
+    position: fixed;
+    top: 10em;
 }
 .component-list {
     grid-area: c;

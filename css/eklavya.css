@@ -263,8 +263,7 @@ reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-ef
 @media screen and (max-width: 425px) {
     .responsive-image {
         width: 120px;
-        height: 120px;
-        border-radius: 50%;
+        height: auto;
     }
 }
 /* Input */
@@ -466,10 +465,10 @@ html,body {
 /* links */
 .link, .link:visited {
     text-decoration: none;
-    color: var(--green);
+    color: var(--gray);
+    font-weight: 600;
 }
 .link:hover {
-    color: var(--blue);
-    text-decoration: underline;
+    color: var(--green);
 }
 
