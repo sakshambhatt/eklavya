@@ -68,7 +68,6 @@
     display: flex;
     position: relative;
     justify-content: center;
-    
 }
 .badge {
     position: absolute;
