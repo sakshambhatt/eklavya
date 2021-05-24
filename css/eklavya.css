@@ -73,6 +73,7 @@
 .badge {
     position: absolute;
     border-radius: 50%;
+    z-index: 1;
     /* can be changed to suit your needs */
     font-size: x-small;
 }
@@ -94,7 +95,7 @@
 .badge-icon {
     padding: 0.3em 0.6em;
     background: var(--red);
-    color: white;
+    color: var(--light);
     font-weight: bold;
     /* needs to be changed individually */
     left: 30px;
