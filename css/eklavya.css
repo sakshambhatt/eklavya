@@ -232,7 +232,7 @@ reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-ef
 .horizontal-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 0.5em;
+    column-gap: 0.25em;
 }
 .horizontal-card-description {
     display: flex;
