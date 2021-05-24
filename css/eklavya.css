@@ -140,9 +140,12 @@ reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-ef
 }
 .button-image > * {
     position: relative;
-    bottom: 0.1em
+    bottom: 0.1em;
     width: 24px;
     height: 24px;
+}
+.button-image:hover {
+    color: var(--green);
 }
 .floating-action-button {
     position: -webkit-sticky;
