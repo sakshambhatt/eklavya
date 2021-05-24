@@ -105,13 +105,13 @@
     background: white;
     color: var(--red);
     font-weight: bold;
-    border-radius: 0.25em;
+    border-radius: 0 0.25em 0.25em 0;
     top: 10px;
     left: 0px;
 }
 /* buttons */
 .button {
-    padding: 0.55em;
+    padding: 0.35em;
     border-radius: 0.35em;
 }
 /* following code was to change the cursor from a pointer to a hand signifying action/ link 
@@ -133,9 +133,15 @@ reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-ef
     color: var(--dark);
     border: 1px solid var(--green);
 }
-.button-icon {
-    background-color: transparent !important;
-    border-color: transparent !important;
+.button-image {
+    border: 0px;
+    background-color: transparent;
+}
+.button-image > img {
+    position: relative;
+    top: 0.35em;
+    width: 24px;
+    height: 24px;
 }
 .floating-action-button {
     position: -webkit-sticky;
@@ -157,19 +163,19 @@ reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-ef
 }
 /* Cards */
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    column-gap: 2em;
-    /* you can adjust these to suit your needs */
-    max-width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center; 
+}
+@media only screen and (min-width: 769px) {
+    .card-container{
+        max-width: 576px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 .card {
     border-radius: 0.25em;
     /* changed keep an eye if anything breaks */
-    width: fit-content;
+    /* width: fit-content; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -186,16 +192,11 @@ reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-ef
     width: 240px;
     height: auto;
 }
-.product-name {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: large;
-}
-.pre-price {
+.original-price {
     color: var(--yellow);
     font-weight: bold;
 }
-.actual-price {
+.final-price {
     color: var(--blue);
     font-weight: bold;
 }
@@ -229,42 +230,25 @@ reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-ef
 }
 /* horizontal card */
 .horizontal-card {
-    display: flex;
-}
-.card-image-horizontal {
-    width: 320px;
-    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5em;
 }
 .horizontal-card-description {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
-    /* width of this element matches that of banner w(horizontal-card-description) = w(horizontal-cardBanner) */
-    width: 320px;
 }
 /* responsive image */
 .responsive-image {
-    width: 25em;
+    width: 100%;
     height: auto;
-}
-@media screen and (max-width: 425px) {
-    .responsive-image {
-        width: 240px;
-        height: auto;
-    }
 }
 /* round image */
 .round-image {
     width: 12em;
     height: 12em;
     border-radius: 50%;
-}
-@media screen and (max-width: 425px) {
-    .responsive-image {
-        width: 120px;
-        height: auto;
-    }
 }
 /* Input */
 /* input field */
