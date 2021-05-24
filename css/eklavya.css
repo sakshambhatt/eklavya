@@ -139,7 +139,7 @@ reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-ef
 }
 .button-image > * {
     position: relative;
-    top: 0.35em;
+    top: 0.15em;
     width: 24px;
     height: 24px;
 }
