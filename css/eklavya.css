@@ -291,13 +291,13 @@ reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-ef
     border-bottom: 2px solid var(--red);
 }
 /* lists */
-.list, .card ul {
+.list {
     list-style-type: none;
 }
 /* horizontal lists */
-.list-h, .card ul {
+.list-h {
     display: flex;
-    column-gap: 1.5em;
+    flex-grow: 2;
 }
 /* vertical lists */
 .list-v {
