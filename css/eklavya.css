@@ -297,6 +297,9 @@ reference: (https://stackoverflow.com/questions/18434626/why-is-cursorpointer-ef
 /* horizontal lists */
 .list-h {
     display: flex;
+    
+}
+.list-h li {
     flex-grow: 2;
 }
 /* vertical lists */
