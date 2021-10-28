@@ -1,3 +1,3 @@
 # eklavya
-a minimal CSS component library for React
+a minimal CSS component library
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text overlay</title>
+    <link rel="stylesheet" href="/css/eklavya.css">
+    <style>
+        .OverlayContainer {
+            position: relative;
+        }
+        .TextOverlay {
+            z-index: 2;
+            position: absolute;
+            bottom: 0;
+            background: var(--dark);
+            color: var(--light);
+            margin-bottom: 0.25em;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="OverlayContainer">
+        <img src="https://www.w3schools.com/w3css/img_snow_wide.jpg" alt="sample image">
+        <div class="TextOverlay">text overlay</div>
+    </div>
+</body>
+</html>
